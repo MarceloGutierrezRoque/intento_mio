@@ -19,6 +19,7 @@
       //---------------------------------------------ahora la vista debe resivir el data, se hizo dps de la primera clase, web_paginas
       if(isset($data->inf)){
         $inf = $data->inf;
+        //print_r($inf);
       }
       //---------------------------------------------
       include_once($rut.'1styles.php');
@@ -383,9 +384,6 @@
         </div>
       </footer>
     </div>
-    <div class="snackbars" id="form-output-global"></div>
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
-    <!--coded by Drel-->
+    <?php include_once($rut.'3js.php'); ?>
   </body>
 </html>

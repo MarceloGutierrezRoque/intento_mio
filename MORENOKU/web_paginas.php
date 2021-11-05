@@ -10,7 +10,7 @@
 		function callID($c1, $pag_id){ //llamar todas las columnas de la tabla por el id de la apgina, requiere al cadena de conexion y el pid que es el id de la pag
 			$data = new stdClass();
 			//------------------------------------
-			$sql = "SELECT * FROM".$this->table." WHERE ".$this->tid."=".$pag_id." ;";
+			$sql = "SELECT * FROM ".$this->table." WHERE ".$this->tid."=".$pag_id." ;";
 			$res = mysqli_query($c1, $sql) OR $_SESSION['Mysqli_Error'] = (mysqli_error($c1));//resultado de la ejecucion, res devuelve como un buleano,mas que eso es info peroe sa infos e reconoce como un buleano
 			if($res){
 				if($res->num_rows > 0){//la flecha es "del"
@@ -23,7 +23,7 @@
 						$data->url = $row['url'];
 						$data->decrip_corta = $row['decrip_corta'];
 					}
-					mysql_free_result($res);//esto es lo ultimo, libero el resultado, lo limpio para que no ocupe memoria en el servidor
+					mysqli_free_result($res);//esto es lo ultimo, libero el resultado, lo limpio para que no ocupe memoria en el servidor
 					$res = null;
 				}else{
 					$data->result = 2;

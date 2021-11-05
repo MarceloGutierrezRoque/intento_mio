@@ -8,6 +8,6 @@
 	//----------------------------------------
 	define('URL', HTTP.'localhost/intento/');
 	define('ACTI', URL.DIRACT);
-	define('CSS', URL.'ccs/');//Carpeta de estilos css
+	define('CSS', URL.'css/');//Carpeta de estilos css
 	define('JS', URL.'js/');//Carpeta javascript
 	define('IMG', URL.'images/');//Carpeta de imagenes
